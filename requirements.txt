@@ -1,4 +1,11 @@
 pandas
 numpy
 seaborn
--e .
+matplotlib
+scikit-learn
+catboost
+xgboost
+Flask
+
+#-e .will build the package at the end
+## remove this comment if you want to install the package in editable mode at the end
