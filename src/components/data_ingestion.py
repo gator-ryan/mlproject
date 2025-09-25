@@ -4,7 +4,6 @@ from src.exceptions import CustomException
 from src.logger import logging
 import pandas as pd
 
-
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
@@ -13,23 +12,20 @@ from src.components.data_transformation import DataTransformationConfig
 
 from src.components.model_trainer import ModelTrainerConfig
 from src.components.model_trainer import ModelTrainer
-
 @dataclass
 class DataIngestionConfig:
     train_data_path: str=os.path.join('artifacts',"train.csv")
     test_data_path: str=os.path.join('artifacts',"test.csv")
     raw_data_path: str=os.path.join('artifacts',"data.csv")
-    ## these above are the path where we want to save our data
 
 class DataIngestion:
     def __init__(self):
         self.ingestion_config=DataIngestionConfig()
-        ## consist of all the path we intend to use in data ingestion
 
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
-            df = pd.read_csv(r"C:\Users\HP\OneDrive\Desktop\Python udemy\mlproject\notebook\data\stud.csv")
+            df=pd.read_csv(r"notebook\data\stud.csv")
             logging.info('Read the dataset as dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
@@ -43,7 +39,7 @@ class DataIngestion:
 
             test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
 
-            logging.info("Ingestion of the data is completed")
+            logging.info("Inmgestion of the data iss completed")
 
             return(
                 self.ingestion_config.train_data_path,
