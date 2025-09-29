@@ -1,1 +1,59 @@
-<h1>Welcome to the home page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Title -->
+        <h1>🎓 Student Performance Prediction</h1>
+
+        <!-- Project Description -->
+        <section>
+            <h2>About the Project</h2>
+            <p>
+                This project leverages <strong>Machine Learning</strong> to predict a student's academic performance 
+                based on various social, personal, and academic factors. By analyzing data patterns, 
+                the model helps identify which students may need additional support to succeed.
+            </p>
+            <p>
+                The model has been trained on the widely used 
+                <strong>UCI Student Performance Dataset</strong>. Multiple algorithms such as Logistic Regression, 
+                Random Forest, Gradient Boosting, XGBoost, and CatBoost were evaluated, with ensemble models 
+                showing the highest prediction accuracy.
+            </p>
+        </section>
+
+        <!-- Purpose -->
+        <section>
+            <h2>What Does This App Do?</h2>
+            <p>
+                This web application takes details of a student as input 
+                (like age, study time, and past failures) and predicts whether the student 
+                is likely to perform well academically. 
+            </p>
+            <p>
+                Such predictions can help <strong>teachers, parents, and students</strong> 
+                make informed decisions, take corrective actions, and ultimately 
+                improve academic outcomes.
+            </p>
+        </section>
+
+        <!-- Next Steps -->
+        <section>
+            <h2>Get Started</h2>
+            <p style="text-align:center; margin-top: 10px;">
+                To try it out, head over to the <a href="/predictdata">Prediction Page</a> 
+                and enter the required details. The system will return a 
+                <strong>performance prediction</strong> instantly.
+            </p>
+        </section>
+    </div>
+
+
+
+</body>
+</html>

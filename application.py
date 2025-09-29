@@ -46,4 +46,6 @@ if __name__=="__main__":
     ## for running locally use 127.0.0.1 & port=5000
     ## for actual use host = 0.0.0. & no port
 
+    # else use host="0.0.0.0" for actual github pushed code
+
 

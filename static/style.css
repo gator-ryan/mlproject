@@ -1,0 +1,147 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body and page background */
+body {
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 50px 25%;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+
+/* Centered form container */
+.login {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+
+    /* Animation */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Main heading */
+.login h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* Form section headings */
+.login legend, .login h2 {
+    color: #34495e;
+    margin: 20px 0 15px 0;
+    transition: color 0.3s ease;
+}
+
+.login legend:hover, .login h2:hover {
+    color: #3498db;
+}
+
+/* Form elements */
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Labels */
+.login label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    color: #2c3e50;
+}
+
+/* Input fields and dropdowns */
+.login input[type="number"],
+.login select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.login input[type="number"]:focus,
+.login select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+    outline: none;
+}
+
+/* Hover effect on select dropdowns */
+.login select:hover {
+    border-color: #2980b9;
+}
+
+/* Submit button */
+.login input[type="submit"] {
+    background: #3498db;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s all ease-in-out;
+    margin-top: 10px;
+}
+
+.login input[type="submit"]:hover {
+    background: #2c80b4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Result display */
+.login h2 {
+    margin-top: 30px;
+    background: #ecf0f1;
+    padding: 15px 20px;
+    border-left: 6px solid #3498db;
+    border-radius: 8px;
+    color: #2c3e50;
+
+    /* Smooth appearance */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 650px) {
+    .login {
+        padding: 30px 20px;
+    }
+    .login h1 {
+        font-size: 1.8rem;
+    }
+    .login input[type="submit"] {
+        font-size: 1rem;
+    }
+}
